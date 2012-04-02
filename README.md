@@ -2,13 +2,13 @@ cukunity
 ========
 
 cukunity is an automation/testing framework that simplifies BDD testing of
-UNITY 3D games.
+[Unity 3D](http://unity3d.com) games.
 
 ## Description
 
 cukunity is a tool inspired by the principles of Behaviour Driven Development.
 Cukunity is a portmanteau of "Cucumber" and "Unity", and as so it provides
-helpers to play nicely with cucumber, although it can be used standalone for
+helpers to play nicely with [Cucumber](http://cukes.info), although it can be used standalone for
 automation purposes.
 
 In short, cukunity provides:
@@ -33,8 +33,7 @@ Currently, the following limitations apply:
 * Ruby 1.9.x (you probably want to install it via [RVM](http://beginrescueend.com)).
 * To use cukunity with cucumber, you need to install cucumber (e.g. `gem install cucumber`)
 * Mac OS X 10.6 and above (tested on Snow Leopard but should work on Lion too).
-* To test on iOS devices, you need [XCode
-* 4.2](https://developer.apple.com/xcode/) or above (including the iOS SDK) and [mobiledevice](https://github.com/imkira/mobiledevice).
+* To test on iOS devices, you need [XCode 4.2](https://developer.apple.com/xcode/) or above (including the iOS SDK) and [mobiledevice](https://github.com/imkira/mobiledevice).
 * To test on Android devices, you need [Android SDK](http://developer.android.com/sdk/) including the platform-tools package.
 
 ## Installation
@@ -75,7 +74,7 @@ Options:
 After you install cukunity, please make sure you run `cukunity doctor`
 to check your system for problems.
 This command will check if you have the necessary tools in order to use
-cukunity for iOS/Android testing. You can also pass `no-ios` or `no-android`
+cukunity for iOS/Android testing. You can also pass `--no-ios` or `--no-android`
 if you don't plan on testing on such platform.
 
 ### Bootstraping your cukunity project
@@ -106,14 +105,14 @@ cukunity features <path/to/your/cucumber/features/directory>
 
 This command will `require 'cukunity/cucumber'` automatically for you,
 and launch cucumber with the specified features directory as test input.
-You will need to specify either `no-ios` or `no-android` to disable
+You will need to specify either `--no-ios` or `--no-android` to disable
 testing on the specified platform.
 
 ## Default Step Definitions
 
 The following list of step definitions is already available via `cukunity features`
 command (alternatively `require 'cukunity/cucumber'`), so you don't need to
-make a copy to yourself. It may find it useful though to use it as reference or
+make a copy to yourself. You may find it useful though to use it as reference or
 to modify it to suit your needs.
 
 * [Installing your Game](http://github.com/imkira/cukunity/blob/master/lib/cukunity/cucumber/step_definitions/install_steps.rb)
@@ -122,7 +121,7 @@ to modify it to suit your needs.
 * [Keyboard Input Simulation](http://github.com/imkira/cukunity/blob/master/lib/cukunity/cucumber/step_definitions/keyboard_input_steps.rb)
 * [Touch Input Simulation](http://github.com/imkira/cukunity/blob/master/lib/cukunity/cucumber/step_definitions/touch_input_steps.rb)
 * [Visible Object Selectors](http://github.com/imkira/cukunity/blob/master/lib/cukunity/cucumber/step_definitions/select_visible_steps.rb)
-* [Force Load Unity Level](http://github.com/imkira/cukunity/blob/master/lib/cukunity/cucumber/step_definitions/load_level_command_steps.rb)
+* [Force Loading of Unity Level](http://github.com/imkira/cukunity/blob/master/lib/cukunity/cucumber/step_definitions/load_level_command_steps.rb)
 
 ### i18n Support
 
@@ -211,4 +210,4 @@ www.opensource.org/licenses/MIT
 
 ## Copyright
 
-Copyright (c) 2012 Mario Freitas. See LICENSE.txt for further details.
+Copyright (c) 2012 Mario Freitas. See [LICENSE.txt](http://github.com/imkira/cukunity/blob/master/LICENSE.txt) for further details.
