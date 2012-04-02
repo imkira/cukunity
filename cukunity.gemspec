@@ -248,7 +248,7 @@ Gem::Specification.new do |s|
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
   s.rubygems_version = "1.8.11"
-  s.summary = "cukunity is an automation/testing framework that simplifies BDD testing of UNITY 3D applications."
+  s.summary = "cukunity is an automation/testing framework that simplifies BDD testing of Unity 3D games."
 
   if s.respond_to? :specification_version then
     s.specification_version = 3
