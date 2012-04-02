@@ -1,0 +1,9 @@
+*.apk
+bin/
+gen/
+!AppKiller.apk
+*.ap_
+*.dex
+*.class
+local.properties
+

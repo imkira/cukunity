@@ -1,0 +1,32 @@
+# rcov generated
+coverage
+coverage.data
+
+# rdoc generated
+rdoc
+
+# yard generated
+doc
+.yardoc
+
+# bundler
+.bundle
+
+# jeweler generated
+pkg
+
+# MacOSX
+.DS_Store
+
+# vim
+*.swp
+
+# Unity
+Unity/Library/*
+!Unity/Library/*.asset
+Unity/Assembly-*
+Unity/*.csproj
+Unity/*.sln
+Unity/*.pidb
+Unity/*.userprefs
+Unity/Temp
