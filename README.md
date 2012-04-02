@@ -28,6 +28,8 @@ Currently, the following limitations apply:
 * Currently, iOS testing will only work if you check the "Development Build" setting on the Build Settings window of your Unity project.
 * Android testing is currently only possible on MacOSX, although this may change in the future with the inclusion of Windows/Linux (don't take this as a promise).
 
+Please, check out the `Progress and Roadmap` section below for additional information.
+
 ## Requirements
 
 * Ruby 1.9.x (you probably want to install it via [RVM](http://beginrescueend.com)).
@@ -194,6 +196,19 @@ TODO: place link to documentation.
 ## Tutorial
 
 TODO: place video here.
+
+## Progress and Roadmap
+
+Currently only GameObject parent-children relationship, and a few Unity 3D built-in
+classes like GameObject, Component, Behavior, Camera, GUIElement, GUIText, GUITexture,
+Transform, etc. are supported. Therefore, one of the primary objectives for the
+following versions is to give support for all built-in classes, to facilitate the
+use of project-specific classes (if possible avoiding reflection), and well-known plugins
+like EZGUI.
+
+It is also necessary to extend the list of default step definitions to support
+the development of real-life projects, ideally, without having to write a single
+step definition by oneself.
 
 ## Contribute
 
