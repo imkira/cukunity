@@ -1,12 +1,14 @@
+[日本語はこちら](https://github.com/imkira/cukunity/blob/master/README_JA.md)
+
 cukunity
 ========
 
-cukunity is an automation/testing framework that simplifies BDD testing of
-[Unity 3D](http://unity3d.com) games.
+cukunity is an automation/testing framework that simplifies [BDD](http://en.wikipedia.org/wiki/Behavior_Driven_Development)
+testing of [Unity 3D](http://unity3d.com) games.
 
 ## Description
 
-cukunity is a tool inspired by the principles of Behaviour Driven Development.
+cukunity is a tool inspired by the principles of [Behaviour Driven Development](http://en.wikipedia.org/wiki/Behavior_Driven_Development).
 Cukunity is a portmanteau of "Cucumber" and "Unity", and as so it provides
 helpers to play nicely with [Cucumber](http://cukes.info), although it can be used standalone for
 automation purposes.
@@ -17,7 +19,7 @@ In short, cukunity provides:
 * A platform-agnostic API for simulating touch and keyboard input on your Unity3D games.
 * The `cukunity` executable to help you bootstrap your Unity3D Projects, and so on.
 * Default step definitions and helpers for Cucumber.
-* Default rake tasks with which you can run Cucumber easily from.
+* Default rake tasks with which you can run cukunity easily from.
 
 ## Limitations
 
@@ -33,10 +35,10 @@ Please, check out the `Progress and Roadmap` section below for additional inform
 ## Requirements
 
 * Ruby 1.9.x (you probably want to install it via [RVM](http://beginrescueend.com)).
-* To use cukunity with cucumber, you need to install cucumber (e.g. `gem install cucumber`)
+* To use cukunity with cucumber, you need to install cucumber and json gems (`gem install cucumber` and `gem install json`)
 * Mac OS X 10.6 and above (tested on Snow Leopard but should work on Lion too).
-* To test on iOS devices, you need [XCode 4.2](https://developer.apple.com/xcode/) or above (including the iOS SDK) and [mobiledevice](http://github.com/imkira/mobiledevice).
-* To test on Android devices, you need [Android SDK](http://developer.android.com/sdk/) including the platform-tools package.
+* On iOS devices, you need [XCode 4.2](https://developer.apple.com/xcode/) or above (including the iOS SDK) and [mobiledevice](http://github.com/imkira/mobiledevice).
+* On Android devices, you need [Android SDK](http://developer.android.com/sdk/) including the platform-tools package.
 
 ## Installation
 
