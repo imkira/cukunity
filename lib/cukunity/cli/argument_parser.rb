@@ -31,11 +31,13 @@ module Cukunity
         # default options
         defaults =
         {
+          :path => Dir.pwd,
           :verbose => true,
           :ios => true,
           :android => true,
           :help => false
         }
+        defaults[:path] = File.join(defaults[:path], 'features') if File.directory?(File.join(defaults[:path], 'features'))
         options = Cukunity::CLI::Options.new(defaults)
 
         @remaining_args = @args.dup
@@ -44,12 +46,17 @@ module Cukunity
 
           opts.separator ''
           opts.separator 'Commands:'
-          opts.separator 'doctor              Check your system for the required platform tools.'
-          opts.separator 'bootstrap <path>    Bootstrap your Unity project.'
-          opts.separator 'features [<path>]   Run cucumber against path containing feature files.'
+          opts.separator 'doctor                     Check your system for the required platform tools.'
+          opts.separator 'bootstrap <path>           Bootstrap your Unity project.'
+          opts.separator 'features [--path=<path>]   Run cucumber against path containing feature files.'
 
           opts.separator ''
           opts.separator 'Options:'
+
+          # --path
+          opts.on('-p', '--path', '=<path>', 'Features path.') do |path|
+            options.path = path
+          end
 
           # --verbose
           opts.on('-v', '--[no-]verbose', 'Enable/Disable verbose mode.') do |v|
