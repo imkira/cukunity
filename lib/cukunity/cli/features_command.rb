@@ -9,11 +9,7 @@ module Cukunity
       end
 
       def execute
-        path = @parser.remaining_args.first
-        if path.nil?
-          path = Dir.pwd
-          path = File.join(path, 'features') if File.directory?(File.join(path, 'features'))
-        end
+        path = @parser.options.path
         if @parser.options.ios
           if @parser.options.android
             abort 'You cannot test both iOS and Android simultaneously. ' \
@@ -28,7 +24,10 @@ module Cukunity
             'either --ios or --android'
         end
         cukunity = File.expand_path(File.join(File.dirname(__FILE__), '..', 'cucumber.rb'))
-        system %Q[cucumber --require "#{cukunity}" --require "#{path}" --format pretty -t "#{platform_flags}"]
+
+        cucumber_args = ['--require', cukunity, '--require', path, '--format', 'pretty', '-t', platform_flags]
+        cucumber_args += @parser.remaining_args
+        system 'cucumber', *cucumber_args
       end
     end
   end
