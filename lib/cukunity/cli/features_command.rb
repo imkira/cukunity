@@ -24,7 +24,10 @@ module Cukunity
             'either --ios or --android'
         end
         cukunity = File.expand_path(File.join(File.dirname(__FILE__), '..', 'cucumber.rb'))
-        system %Q[cucumber --require "#{cukunity}" --require "#{path}" --format pretty -t "#{platform_flags}"]
+
+        cucumber_args = ['--require', cukunity, '--require', path, '--format', 'pretty', '-t', platform_flags]
+        cucumber_args += @parser.remaining_args
+        system 'cucumber', *cucumber_args
       end
     end
   end
