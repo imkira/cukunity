@@ -48,9 +48,12 @@ module Cukunity
 
           opts.separator ''
           opts.separator 'Commands:'
-          opts.separator 'doctor              Check your system for the required platform tools.'
-          opts.separator 'bootstrap <path>    Bootstrap your Unity project.'
-          opts.separator 'features [<path>]   Run cucumber against path containing feature files.'
+          opts.separator 'doctor'
+          opts.separator '    Check your system for the required platform tools.'
+          opts.separator 'bootstrap <path>'
+          opts.separator '    Bootstrap your Unity project.'
+          opts.separator 'features [<path>] [-- <cucumber-args>...]'
+          opts.separator '    Run cucumber against path containing feature files.'
 
           opts.separator ''
           opts.separator 'Options:'
