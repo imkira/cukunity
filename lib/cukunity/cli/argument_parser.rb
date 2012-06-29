@@ -5,6 +5,7 @@ module Cukunity
     class ArgumentParser
       attr_reader :args
       attr_reader :remaining_args
+      attr_reader :cucumber_args
       attr_reader :options
       attr_reader :command
 
@@ -38,7 +39,10 @@ module Cukunity
         }
         options = Cukunity::CLI::Options.new(defaults)
 
-        @remaining_args = @args.dup
+        @remaining_args = @args.take_while {|arg| arg != '--' }
+        @cucumber_args  = @args.drop_while {|arg| arg != '--' }
+        @cucumber_args  = @cucumber_args.drop(1) unless @cucumber_args.empty?
+
         @parser = ::OptionParser.new do |opts|
           opts.banner = 'Usage: cukunity [options] <command>'
 
