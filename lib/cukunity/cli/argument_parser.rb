@@ -5,6 +5,7 @@ module Cukunity
     class ArgumentParser
       attr_reader :args
       attr_reader :remaining_args
+      attr_reader :cucumber_args
       attr_reader :options
       attr_reader :command
 
@@ -38,15 +39,21 @@ module Cukunity
         }
         options = Cukunity::CLI::Options.new(defaults)
 
-        @remaining_args = @args.dup
+        @remaining_args = @args.take_while {|arg| arg != '--' }
+        @cucumber_args  = @args.drop_while {|arg| arg != '--' }
+        @cucumber_args  = @cucumber_args.drop(1) unless @cucumber_args.empty?
+
         @parser = ::OptionParser.new do |opts|
           opts.banner = 'Usage: cukunity [options] <command>'
 
           opts.separator ''
           opts.separator 'Commands:'
-          opts.separator 'doctor              Check your system for the required platform tools.'
-          opts.separator 'bootstrap <path>    Bootstrap your Unity project.'
-          opts.separator 'features [<path>]   Run cucumber against path containing feature files.'
+          opts.separator 'doctor'
+          opts.separator '    Check your system for the required platform tools.'
+          opts.separator 'bootstrap <path>'
+          opts.separator '    Bootstrap your Unity project.'
+          opts.separator 'features [<path>] [-- <cucumber-args>...]'
+          opts.separator '    Run cucumber against path containing feature files.'
 
           opts.separator ''
           opts.separator 'Options:'
