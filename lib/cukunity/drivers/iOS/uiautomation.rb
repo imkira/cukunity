@@ -31,10 +31,14 @@ module Cukunity
             :bundle_id => bundle_id
           }
 
-          generate_slave_js(slave_js, slave_js_opts) 
+          generate_slave_js(slave_js, slave_js_opts)
 
           # as of Xcode 4.3.2, the Developer folder is now in a different place.
-          templates = ['/Developer/Platforms/iPhoneOS.platform/Developer/Library/Instruments/PlugIns/AutomationInstrument.bundle/Contents/Resources/Automation.tracetemplate', '/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Instruments/PlugIns/AutomationInstrument.bundle/Contents/Resources/Automation.tracetemplate']
+          templates = [
+            '/Developer/Platforms/iPhoneOS.platform/Developer/Library/Instruments/PlugIns/AutomationInstrument.bundle/Contents/Resources/Automation.tracetemplate',
+            '/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Instruments/PlugIns/AutomationInstrument.bundle/Contents/Resources/Automation.tracetemplate',
+            '/Applications/Xcode.app/Contents/Applications/Instruments.app/Contents/PlugIns/AutomationInstrument.bundle/Contents/Resources/Automation.tracetemplate'
+          ]
           template = templates.find do |template|
             File.file?(template)
           end

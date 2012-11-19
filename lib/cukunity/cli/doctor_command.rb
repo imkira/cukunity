@@ -4,7 +4,7 @@ module Cukunity
   module CLI
     class DoctorCommand
       def initialize(parser)
-        @parser = parser 
+        @parser = parser
       end
 
       def execute
@@ -26,7 +26,7 @@ module Cukunity
       def check_error(item, path, solution)
         $stdout.puts '===>'.red + " #{item} (#{path.red})"
         solution.each_line do |line|
-          $stdout.puts '::::: '.red + " #{line}" 
+          $stdout.puts '::::: '.red + " #{line}"
         end
       end
 
@@ -58,7 +58,7 @@ module Cukunity
           # gem install cucumber
 
           or, if you use bundler, just add the following to your Gemfile:
-          
+
           gem 'cucumber'
 
           eos
@@ -84,7 +84,11 @@ module Cukunity
 
           eos
 
-        check_file ['/Developer/Platforms/iPhoneOS.platform/Developer/Library/Instruments/PlugIns/AutomationInstrument.bundle/Contents/Resources/Automation.tracetemplate', '/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Instruments/PlugIns/AutomationInstrument.bundle/Contents/Resources/Automation.tracetemplate'], <<-eos
+          check_file [
+            '/Developer/Platforms/iPhoneOS.platform/Developer/Library/Instruments/PlugIns/AutomationInstrument.bundle/Contents/Resources/Automation.tracetemplate',
+            '/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Instruments/PlugIns/AutomationInstrument.bundle/Contents/Resources/Automation.tracetemplate',
+            '/Applications/Xcode.app/Contents/Applications/Instruments.app/Contents/PlugIns/AutomationInstrument.bundle/Contents/Resources/Automation.tracetemplate'
+          ], <<-eos
 
           Please install XCode 4.2 or above from https://developer.apple.com/xcode/ .
           Also, make sure you have iOS 5 SDK installed.
