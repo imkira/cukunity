@@ -5,17 +5,18 @@
 
 Gem::Specification.new do |s|
   s.name = "cukunity"
-  s.version = "0.1.0"
+  s.version = "0.1.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Mario Freitas"]
-  s.date = "2012-04-02"
+  s.date = "2012-11-19"
   s.description = "cukunity is a tool inspired by the principles of Behaviour Driven Development. Cukunity is a portmanteau of \"Cucumber\" and \"Unity\", and as so it provides helpers to play nicely with cucumber, although it can be used standalone for automation. "
   s.email = "imkira@gmail.com"
   s.executables = ["cukunity"]
   s.extra_rdoc_files = [
     "LICENSE.txt",
-    "README.md"
+    "README.md",
+    "README_JA.md"
   ]
   s.files = [
     ".document",
@@ -25,6 +26,7 @@ Gem::Specification.new do |s|
     "Gemfile.lock",
     "LICENSE.txt",
     "README.md",
+    "README_JA.md",
     "Rakefile",
     "Unity/Assets/Demo.meta",
     "Unity/Assets/Demo/Art.meta",
@@ -247,7 +249,7 @@ Gem::Specification.new do |s|
   s.homepage = "http://github.com/imkira/cukunity"
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
-  s.rubygems_version = "1.8.11"
+  s.rubygems_version = "1.8.15"
   s.summary = "cukunity is an automation/testing framework that simplifies BDD testing of Unity 3D games."
 
   if s.respond_to? :specification_version then
