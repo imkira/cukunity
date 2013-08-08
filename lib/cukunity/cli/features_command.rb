@@ -3,9 +3,9 @@ require 'pathname'
 
 module Cukunity
   module CLI
-    class FeaturesCommand 
+    class FeaturesCommand
       def initialize(parser)
-        @parser = parser 
+        @parser = parser
       end
 
       def execute
@@ -29,7 +29,7 @@ module Cukunity
         end
         cukunity = File.expand_path(File.join(File.dirname(__FILE__), '..', 'cucumber.rb'))
 
-        cucumber_cmd_args = ['--require', cukunity, '--require', path, '--format', 'pretty', '-t', platform_flags]
+        cucumber_cmd_args = ['--require', cukunity, '--format', 'pretty', '-t', platform_flags, path]
         cucumber_cmd_args += @parser.cucumber_args
         system 'cucumber', *cucumber_cmd_args
       end
