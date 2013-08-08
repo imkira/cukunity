@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "cukunity"
-  s.version = "0.1.1"
+  s.version = "0.1.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Mario Freitas"]
-  s.date = "2012-11-19"
+  s.date = "2013-08-08"
   s.description = "cukunity is a tool inspired by the principles of Behaviour Driven Development. Cukunity is a portmanteau of \"Cucumber\" and \"Unity\", and as so it provides helpers to play nicely with cucumber, although it can be used standalone for automation. "
   s.email = "imkira@gmail.com"
   s.executables = ["cukunity"]
@@ -249,21 +249,21 @@ Gem::Specification.new do |s|
   s.homepage = "http://github.com/imkira/cukunity"
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
-  s.rubygems_version = "1.8.15"
+  s.rubygems_version = "2.0.6"
   s.summary = "cukunity is an automation/testing framework that simplifies BDD testing of Unity 3D games."
 
   if s.respond_to? :specification_version then
-    s.specification_version = 3
+    s.specification_version = 4
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
       s.add_runtime_dependency(%q<json>, [">= 1.6.5"])
       s.add_runtime_dependency(%q<term-ansicolor>, [">= 1.0.6"])
-      s.add_development_dependency(%q<rspec>, ["~> 2.8.0"])
-      s.add_development_dependency(%q<yard>, ["~> 0.7"])
+      s.add_runtime_dependency(%q<cucumber>, [">= 1.1.4"])
+      s.add_runtime_dependency(%q<rspec>, [">= 2.8.0"])
+      s.add_development_dependency(%q<yard>, ["~> 0.8.7"])
       s.add_development_dependency(%q<rdoc>, ["~> 3.12"])
-      s.add_development_dependency(%q<cucumber>, [">= 0"])
-      s.add_development_dependency(%q<bundler>, ["~> 1.0.0"])
-      s.add_development_dependency(%q<jeweler>, ["~> 1.8.3"])
+      s.add_development_dependency(%q<bundler>, ["~> 1.0"])
+      s.add_development_dependency(%q<jeweler>, ["~> 1.8.6"])
       s.add_development_dependency(%q<reek>, ["~> 1.2.8"])
       s.add_development_dependency(%q<roodi>, ["~> 2.1.0"])
       s.add_runtime_dependency(%q<json>, [">= 1.6.5"])
@@ -271,12 +271,12 @@ Gem::Specification.new do |s|
     else
       s.add_dependency(%q<json>, [">= 1.6.5"])
       s.add_dependency(%q<term-ansicolor>, [">= 1.0.6"])
-      s.add_dependency(%q<rspec>, ["~> 2.8.0"])
-      s.add_dependency(%q<yard>, ["~> 0.7"])
+      s.add_dependency(%q<cucumber>, [">= 1.1.4"])
+      s.add_dependency(%q<rspec>, [">= 2.8.0"])
+      s.add_dependency(%q<yard>, ["~> 0.8.7"])
       s.add_dependency(%q<rdoc>, ["~> 3.12"])
-      s.add_dependency(%q<cucumber>, [">= 0"])
-      s.add_dependency(%q<bundler>, ["~> 1.0.0"])
-      s.add_dependency(%q<jeweler>, ["~> 1.8.3"])
+      s.add_dependency(%q<bundler>, ["~> 1.0"])
+      s.add_dependency(%q<jeweler>, ["~> 1.8.6"])
       s.add_dependency(%q<reek>, ["~> 1.2.8"])
       s.add_dependency(%q<roodi>, ["~> 2.1.0"])
       s.add_dependency(%q<json>, [">= 1.6.5"])
@@ -285,12 +285,12 @@ Gem::Specification.new do |s|
   else
     s.add_dependency(%q<json>, [">= 1.6.5"])
     s.add_dependency(%q<term-ansicolor>, [">= 1.0.6"])
-    s.add_dependency(%q<rspec>, ["~> 2.8.0"])
-    s.add_dependency(%q<yard>, ["~> 0.7"])
+    s.add_dependency(%q<cucumber>, [">= 1.1.4"])
+    s.add_dependency(%q<rspec>, [">= 2.8.0"])
+    s.add_dependency(%q<yard>, ["~> 0.8.7"])
     s.add_dependency(%q<rdoc>, ["~> 3.12"])
-    s.add_dependency(%q<cucumber>, [">= 0"])
-    s.add_dependency(%q<bundler>, ["~> 1.0.0"])
-    s.add_dependency(%q<jeweler>, ["~> 1.8.3"])
+    s.add_dependency(%q<bundler>, ["~> 1.0"])
+    s.add_dependency(%q<jeweler>, ["~> 1.8.6"])
     s.add_dependency(%q<reek>, ["~> 1.2.8"])
     s.add_dependency(%q<roodi>, ["~> 2.1.0"])
     s.add_dependency(%q<json>, [">= 1.6.5"])
