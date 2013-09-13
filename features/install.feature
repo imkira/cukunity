@@ -1,6 +1,7 @@
+@install
 Feature: Install application
   In order to test Unity apps
-  As a programmer 
+  As a programmer
   I must be able install them first
 
   Background:
