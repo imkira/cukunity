@@ -79,7 +79,7 @@ GEM
     term-ansicolor (1.2.2)
       tins (~> 0.8)
     tins (0.8.3)
-    yard (0.8.7)
+    yard (0.9.20)
 
 PLATFORMS
   ruby
@@ -94,4 +94,4 @@ DEPENDENCIES
   roodi (~> 2.1.0)
   rspec (>= 2.8.0)
   term-ansicolor (>= 1.0.6)
-  yard (~> 0.8.7)
+  yard (~> 0.9.20)
